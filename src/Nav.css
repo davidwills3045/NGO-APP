@@ -1,0 +1,208 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 224;
+  /* --first-color: hsl(var(--hue-color), 89%, 60%); */
+  --first-color: red;
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
+}
+
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1200px;
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color:transparent;
+  background:linear-gradient(rgba(0, 0, 0,0.7), rgba(0, 0, 0, 0.7))
+}
+
+/*===== NAV =====*/
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+  background: none ;
+  /* gap: 100px; */
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+  .donate-btn{
+    display:block;
+  }
+  .donate-btn2{
+    display:none;
+  }
+}
+
+.nav__item {
+  margin-bottom: var(--mb-4);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+
+}
+
+.nav__link {
+  position: relative;
+  color: #fff;
+}
+
+.nav__link:hover {
+  position: relative;
+}
+
+.nav__link:hover::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 1.5rem;
+  background-color: #F08200;
+}
+.logo-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__logo {
+    border-radius: 25px;
+    width: 130px;
+    height: 42px;
+}
+
+.nav__toggle {
+  color: #FFF;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*Active menu*/
+.active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 1.5rem;
+  background-color: #F08200;
+}
+
+/*=== Show menu ===*/
+.show {
+  right: 0;
+}
+
+.top-btn{
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	padding: 4px 30px;
+	background: transparent;
+	border: 3px solid #F08200;
+	border-radius: 30px;
+	color: #FFF;
+	letter-spacing: 1px;
+	font-size: 1.1rem;
+	font-weight: 500;
+	transition: ease .50s;
+    font-family: var(--body-font);
+
+}
+
+.top-btn:hover{
+	transform: scale(1.1);
+	background: #F08200;
+	color: black;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  .nav {
+    height: calc(3rem + 1.5rem);
+  }
+
+  .nav__list {
+    display: flex;
+    padding-top: 0;
+  }
+
+  .nav__item {
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__link {
+    color: #FFF;
+    font-size: 14px;
+  }
+
+  .donate-btn {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

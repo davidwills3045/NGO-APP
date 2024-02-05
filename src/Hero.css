@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.herodiv{
+    background-image:linear-gradient(rgba(0, 0, 0,0.4), rgba(0, 0, 0, 0.4)), url('https://i.postimg.cc/7ZwVYJ5b/unsplash-NZM-Ttl-Kqo-U.png');
+    height: 115vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden !important;
+}
+.header-text{
+    /* position: relative; */
+    text-align: center;
+    line-height: normal;
+    font-weight: 700;
+    font-size: 45px;
+    color: #FFF;
+    font-family: 'poppins';
+}
+.header-spn{
+    color: #F08200;
+}
+.header-text2{
+    font-size: 23px;
+    text-align: center;
+    font-family: 'poppins';
+    color: #FFF;
+}
