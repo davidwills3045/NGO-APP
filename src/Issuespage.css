@@ -1,0 +1,94 @@
+.third-div {
+    overflow: hidden !important;
+    width: 100%;
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.top-text {
+    text-align: center;
+}
+
+.top-text h1 {
+    color: #EC8103;
+    font-family: 'roboto', sans-serif;
+    font-size: 35px;
+}
+
+.top-text p {
+    color: #283847;
+    font-family: 'roboto', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding-left: 2.4rem;
+}
+
+.flex1 {
+    padding-top: 1rem;
+    background-color: #F3F4F6;
+    width: 17rem;
+    height: 19rem;
+    border-radius: 15px;
+    border: #979797 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.flex1 h3 {
+    font-family: "roboto", sans-serif;
+    color: #050505;
+    font-size: 23px;
+    /* padding-bottom: 2rem; */
+}
+
+.flex1 p {
+    font-family: "roboto", sans-serif;
+    color: #283847;
+    line-height:21px;
+    margin-top: .7rem;
+}
+
+.flexbox-btn {
+    width: 4rem;
+    height: 3rem;
+    background-color: #EC8103;
+    margin-right: -8.5rem;
+    border: none;
+    border-radius: 10px;
+}
+.flex1-h1{
+    margin-left: -4rem;
+}
+
+.flex1-h3{
+    margin-left: -6rem;
+}
+
+.flex1-h4{
+    margin-left: -5rem;
+}
+
+#third-flex{
+    background-color: #EC8103;
+}
+
+#third-h{
+    color: #FFF;
+}
+
+#third-p{
+    color: #050505;
+}
+#arrow2{
+    background-color: #FFF;
+}

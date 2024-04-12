@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useEffect } from 'react';
 const Navbar = () => {
     /*===== MENU SHOW =====*/ 
     const handleMenuToggle = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
     /*==================== REMOVE MENU MOBILE ====================*/
     const navLink = document.querySelectorAll('.nav__link')
 
-    function linkAction(){
+    const linkAction = () => {
         const navMenu = document.getElementById('nav-menu')
         // When we click on each nav__link, we remove the show-menu class
         navMenu.classList.remove('show')
@@ -22,24 +22,47 @@ const Navbar = () => {
     navLink.forEach(n => n.addEventListener('click', linkAction))
 
     /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-    const sections = document.querySelectorAll('section[id]')
-
-    function scrollActive(){
-        const scrollY = window.pageYOffset
-
-        sections.forEach(current =>{
-            const sectionHeight = current.offsetHeight
+    useEffect(() => {
+        const handleScrollActive = () => {
+          const sections = document.querySelectorAll('section[id]');
+          const scrollY = window.pageYOffset;
+    
+          sections.forEach((current) => {
+            const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 50;
-            const sectionId = current.getAttribute('id')
-
-            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-            }else{
-                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+            const sectionId = current.getAttribute('id');
+    
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              document.querySelector(`.nav__menu a[href*=${sectionId}]`).classList.add('active');
+            } else {
+              document.querySelector(`.nav__menu a[href*=${sectionId}]`).classList.remove('active');
             }
-        })
-    }
-    window.addEventListener('scroll', scrollActive)
+          });
+        };
+    
+        window.addEventListener('scroll', handleScrollActive);
+    
+        // Cleanup the event listener on component unmount
+        return () => window.removeEventListener('scroll', handleScrollActive);
+    }, []);
+    // const sections = document.querySelectorAll('section[id]')
+
+    // function scrollActive(){
+    //     const scrollY = window.pageYOffset
+
+    //     sections.forEach(current =>{
+    //         const sectionHeight = current.offsetHeight
+    //         const sectionTop = current.offsetTop - 50;
+    //         const sectionId = current.getAttribute('id')
+
+    //         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+    //             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+    //         }else{
+    //             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+    //         }
+    //     })
+    // }
+    // window.addEventListener('scroll', scrollActive)
     //  ====== change background to white ==== //
     // const [nav, setnav] = useState(false);
 
@@ -69,7 +92,7 @@ const Navbar = () => {
                         <li className="nav__item"><a href="#blog" className="nav__link">BLOG</a></li>
                         <li className="nav__item"><a href="#contact" className="nav__link">CONTACT US</a></li>
                         <div className="donate-btn">
-                            <a href="#" className="top-btn">Donate Now</a>
+                            <a href="#" className="top-btn" id='donate-menu'>Donate Now</a>
                         </div>
                     </ul>
                 </div>
