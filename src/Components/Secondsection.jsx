@@ -1,5 +1,20 @@
-// import React from 'react'
+import {useEffect} from 'react'
+import grid1 from '../icon/Rectangle 10.png'
+import grid2 from '../icon/Rectangle 28.png'
+import grid3 from '../icon/Rectangle 9.png'
+import ScrollReveal from "scrollreveal";
+
+
 const Secondsection = () => {
+  useEffect(() => {
+    const sr =  ScrollReveal ({
+      distance: '200px',
+      duration: 2700,
+      reset: true
+    })
+    sr.reveal(".masterdiv1", { origin: "top", delay: 350 });
+    sr.reveal(".grid-images", { origin: "bottom", delay: 350 });
+  }, []);
   return (
     <>
       <section className="secondsec-div" id="about">
@@ -29,14 +44,14 @@ const Secondsection = () => {
           <div className="dispaly-column">
             <div>
               <img
-                src="https://i.postimg.cc/kGyY8fFw/Rectangle-10.png"
+                src={grid1}
                 alt="loding"
                 className="main-image1"
               />
             </div>
             <div>
               <img
-                src="https://i.postimg.cc/hGHYqJt8/Rectangle-28.png"
+                src={grid2}
                 alt="loading"
                 className="main-image1"
               />
@@ -44,7 +59,7 @@ const Secondsection = () => {
           </div>
           <div className="image3">
             <img
-              src="https://i.postimg.cc/k5VHZNqX/Rectangle-9.png"
+              src={grid3}
               alt="loading"
               className="main-image"
             />

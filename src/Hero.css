@@ -4,14 +4,17 @@
     height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding-top: 5%;
-    overflow: hidden !important;
+    padding-top: 4.5rem;
+    overflow: hidden;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: aqua;
 }
 
+
 .header-left-image {
-    margin-left: 4.5rem;
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -24,9 +27,9 @@
 }
 
 .header-right-text {
-    margin-right: 5%;
-    width: 50%;
+    width: 50rem;
     height: 70vh;
+    margin-left: 1rem;
 }
 
 .yellow {
@@ -51,33 +54,204 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 2rem;
+
 }
 
-.right-button-div{
+.right-button-div {
     display: flex;
     margin-top: 6%;
 }
 
-.hero-button1{
+.hero-button1 {
     font-family: "roboto";
-    font-size: 15px;
+    font-size: 20px;
     width: 12rem;
     height: 3.5rem;
     border-radius: 8px;
-    background-color:#000000;
+    background-color: #000000;
     color: white;
     border: none;
+    transition: ease .50s;
+    cursor: pointer;
 }
-.hero-button2{
+
+.hero-button1:hover {
+    transform: scale(1.1);
+}
+
+.hero-button2 {
     font-family: "roboto";
-    font-size: 15px;
+    font-size: 20px;
     width: 12rem;
     height: 3.5rem;
     border-radius: 8px;
     border: 1px solid black;
     background-color: white;
+    transition: ease .50s;
+    cursor: pointer;
 }
-.div2{
-    margin-left: 5rem; 
+
+.hero-button2:hover {
+    transform: scale(1.1);
 }
+
+.div2 {
+    margin-left: 5rem;
+}
+
+@media (max-width: 1070px) {
+    .left-image {
+        width: 470px;
+        height: 65vh;
+        transition: .5s;
+    }
+
+    .sub-right-div {
+        padding-top: 2.5rem;
+        transition: .5s;
+    }
+
+    .heading {
+        font-size: 29px;
+        transition: .5s;
+    }
+
+    .subtitle {
+        font-size: 17px;
+        transition: .5s;
+    }
+
+    .hero-button1 {
+        width: 11rem;
+        height: 3rem;
+        font-size: 17px;
+    }
+
+    .hero-button2 {
+        width: 11rem;
+        height: 3rem;
+        font-size: 17px;
+    }
+
+    .div2 {
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 952px) {
+    .heading {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .hero-button1 {
+        width: 10rem;
+    }
+
+    .hero-button2 {
+        width: 10rem;
+    }
+
+    .div2 {
+        margin-left: 3rem;
+    }
+
+    .left-image {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 905px) {
+    .heading {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .hero-button1 {
+        width: 9rem;
+        height: 2.5rem;
+    }
+
+    .hero-button2 {
+        width: 9rem;
+        height: 2.5rem;
+    }
+
+    .div2 {
+        margin-left: 2rem;
+    }
+
+    .left-image {
+        height: 50vh;
+    }
+
+    .herodiv {
+        height: 90vh;
+    }
+}
+
+
+@media (max-width: 856px) {
+    .herodiv {
+        flex-direction: column-reverse;
+        height: 135vh;
+
+    }
+
+    .left-image {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .header-left-image {
+        width: 100%;
+    }
+
+    .header-right-text {
+        width: 750px;
+        /* background-color: aqua; */
+    }
+
+    .sub-right-div {
+        padding-top: 1.5rem;
+    }
+
+    .heading {
+        font-size: 31px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        margin-top: 2%;
+    }
+    .right-button-div{
+        margin-top: 4%;
+    }
+    .hero-button1{
+        width: 12rem;
+        height: 3rem;
+    }
+    .hero-button2{
+        width: 12rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .herodiv{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 720px) {}
+
+@media (max-width: 540px) {}

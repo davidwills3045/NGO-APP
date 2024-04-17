@@ -52,7 +52,7 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color:transparent;
+  background-color: transparent;
   border-bottom: black 2px solid;
   background-color: #FFF;
   /* background:linear-gradient(rgba(0, 0, 0,0.7), rgba(0, 0, 0, 0.7)) */
@@ -65,7 +65,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
-  background: none ;
+  background: none;
   /* gap: 100px; */
 }
 
@@ -80,13 +80,15 @@
     background-color: black;
     transition: .5s;
   }
-  .donate-btn{
-    display:block;
+
+  .donate-btn {
+    display: block;
   }
-  .donate-btn2{
-    display:none;
+
+  .donate-btn2 {
+    display: none;
   }
- 
+
 }
 
 .nav__item {
@@ -114,16 +116,19 @@
   top: 1.5rem;
   background-color: #F08200;
 }
-.logo-div{
+
+.logo-div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .nav__logo {
-    border-radius: 25px;
-    width: 130px;
-    height: 42px;
+  border-radius: 25px;
+  width: 130px;
+  height: 42px;
 }
+
 
 .nav__toggle {
   font-size: 1.5rem;
@@ -146,30 +151,31 @@
   right: 0;
 }
 
-.top-btn{
-	display: inline-flex;
-    justify-content: center;
-    align-items: center;
-	padding: 4px 30px;
-	background: transparent;
-	border: 3px solid #F08200;
-	border-radius: 30px;
-	color:black;
-	letter-spacing: 1px;
-	font-size: 1.1rem;
-	font-weight: 500;
-	transition: ease .50s;
-    font-family: var(--body-font);
+.top-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 30px;
+  background: transparent;
+  border: 3px solid #F08200;
+  border-radius: 30px;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: ease .50s;
+  font-family: var(--body-font);
 
 }
-#donate-menu{
+
+#donate-menu {
   color: white;
 }
 
-.top-btn:hover{
-	transform: scale(1.1);
-	background: #F08200;
-	color: #FFF;
+.top-btn:hover {
+  transform: scale(1.1);
+  background: #F08200;
+  color: #FFF;
 }
 
 
@@ -195,7 +201,7 @@
   }
 
   .nav__link {
-    color:black;
+    color: black;
     font-size: 14px;
   }
 
@@ -210,4 +216,33 @@
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+@media (max-width: 970px) {
+  .nav__link {
+    font-size: 12px;
+  }
+  .top-btn{
+  padding: 4px 25px;
+  font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .nav__link {
+    font-size: 11px;
+  }
+  .top-btn{
+  padding: 3px 22px;
+  font-size: .9rem;
+  }
+  .nav__logo {
+    width: 100px;
+    height: 42px;
+  }
+  .nav__item{
+    margin-left: 2.1rem;
+  }
+  
 }

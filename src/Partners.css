@@ -1,0 +1,40 @@
+.partner{
+    width: 100%;
+    height: 80vh;
+    overflow: hidden !important;
+    background-image: url(../src/icon/back2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.partner-h1{
+    text-align: center;
+    font-family: "Roboto";
+    color: #EC8103;
+    font-size: 23px;
+}
+.partner-icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+.action{
+    width: 10rem;
+}
+.m1{
+    width: 7rem;
+}
+.part-text{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 25px;
+    color: #283847;
+    margin-top: 3rem;
+    line-height: 35px;
+}
