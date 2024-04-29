@@ -1,0 +1,87 @@
+.donate-modal {
+    display: none; /* Initially hidden */
+    position: fixed; /* Covers entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark translucent background */
+    z-index: 10; /* Ensures modal appears above other elements */
+    transition: 0.3s ease all;
+    overflow: hidden !important;
+  }
+  
+  .donate-modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: 0.3s ease all; /* Smooth hover effect */
+    min-height: 60vh;
+    width: 95%;
+    font-family: "poppins";
+  }
+  
+  .modal-content:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  }
+  
+  .d-h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .d-p {
+    margin-bottom: 1.5rem;
+  }
+  .d-h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .donation-details {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .donation-details label {
+    margin-right: 1rem;
+  }
+  
+  .donation-frequency {
+    display: flex;
+    align-items: center;
+    /* margin-left: 1rem; */
+  }
+  
+  .donation-frequency input[type="radio"] {
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+  }
+  .close-btn {
+    display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 30px;
+  background: transparent;
+  border: 3px solid #F08200;
+  border-radius: 30px;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: ease .50s;
+  font-family: var(--body-font);
+  cursor: pointer;
+  }
+  .close-btn:hover {
+    transform: scale(1.1);
+    background: #F08200;
+    color: #FFF;
+  }

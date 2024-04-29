@@ -6,7 +6,7 @@ const Values = () => {
     const sr =  ScrollReveal ({
       distance: '250px',
       duration: 2700,
-      reset: true
+      reset: false,
     })
     sr.reveal(".value-text", { origin: "left", delay: 350 });
     sr.reveal(".value-flex", { origin: "right", delay: 350 });
@@ -28,7 +28,7 @@ const Values = () => {
               </p>
             </div>
           </div>
-          <div className="value-flex1">
+          <div className="value-flex1" id='second-v'>
             <div>
               <h3 className="i">Integrity</h3>
               <p>
@@ -40,10 +40,10 @@ const Values = () => {
           <div className="value-flex1" id="e">
             <div>
               <h3 className="e">Equity</h3>
-              <p>We are fair and impartial to all.</p>
+              <p>We are fair and impartial <br /> to all.</p>
             </div>
           </div>
-          <div className="value-flex1">
+          <div className="value-flex1 last-v">
             <div>
               <h3 className="d">Diligence</h3>
               <p>

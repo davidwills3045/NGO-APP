@@ -8,7 +8,7 @@ const Issuespage = () => {
     const sr = ScrollReveal({
       distance: "200px",
       duration: 2700,
-      reset: true,
+      reset: false,
     });
     sr.reveal(".top-text", { origin: "left", delay: 350 });
     sr.reveal(".flexbox", { origin: "right", delay: 350 });
@@ -44,7 +44,7 @@ const Issuespage = () => {
               </a>
             </div>
           </div>
-          <div className="flex1">
+          <div className="flex1 second">
             <div>
               <h3>
                 WASH (Water supply, <br /> Sanitation and <br /> Hygiene)
@@ -80,7 +80,7 @@ const Issuespage = () => {
               </a>
             </div>
           </div>
-          <div className="flex1">
+          <div className="flex1 last">
             <div>
               <h3 className="flex1-h4">
                 Just & Good <br /> Governance

@@ -13,12 +13,12 @@ const Events = () => {
   const splideOptions = {
     perPage: 4,
     perMove: 1,
-    type: "loop",
-    rewind: true,
+    type: "slide",
+    rewind: false,
     keyboard: "global",
     pagination: false,
     padding: "2rem",
-    gap: "1rem",
+    // gap: "1rem",
     breakpoints: {
       1200: { perPage: 3 },
       991: { perPage: 2.3 },
@@ -26,12 +26,18 @@ const Events = () => {
       500: { perPage: 1.3 },
       425: { perPage: 1 },
     },
+    onSlideEnd: (splide) => { 
+      if (splide.Index === splide.length - 1) {
+        console.log("Reached last slide!");
+      }
+    },
   };
+ 
   useEffect(() => {
     const sr = ScrollReveal({
       distance: "200px",
       duration: 2700,
-      reset: true,
+      reset: false,
     });
     sr.reveal(".event-h1", { origin: "top", delay: 350 });
     sr.reveal(".carosel-div", { origin: "bottom", delay: 350 });

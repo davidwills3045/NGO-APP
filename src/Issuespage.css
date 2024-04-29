@@ -1,7 +1,8 @@
 .third-div {
     overflow: hidden !important;
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 5rem;
     padding-left: 3.7rem;
     padding-right: 3.7rem;
@@ -25,9 +26,9 @@
 }
 
 .flexbox{
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 5rem;
 }
@@ -45,6 +46,8 @@
     align-items: center;
     transition: ease .50s;
 	cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .flex1 h3 {
@@ -91,4 +94,56 @@
 }
 #arrow2{
     background-color: #FFF;
+}
+
+@media (max-width: 1070px) {
+    .top-text p{
+        font-size: 20px;
+    }
+    .top-text h1{
+        font-size: 30px;
+    }
+    .last{
+        margin-top: 1.5rem;
+    }
+    .third-div{
+        padding-bottom: 2.5rem;
+    }
+}
+@media (max-width: 1030px) {
+    #third-flex{
+        margin-top: 1.5rem;
+    }
+    .flex1{
+        width: 20rem;
+        height: 21rem;
+    }
+}
+@media (max-width: 822px) {
+    .second{
+        margin-top: 1.5rem;
+    }
+  
+}
+@media (max-width: 400px) {
+    .third-div{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+  
+}
+@media (max-width: 330px) {
+    .flex1 h3{
+        font-size: 18px;
+    }
+    .flex1 p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 280px) {
+    .third-div{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

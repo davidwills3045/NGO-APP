@@ -1,35 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 .herodiv {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding-top: 4.5rem;
-    overflow: hidden;
+    padding-top: 4rem;
+    overflow: hidden !important;
     padding-left: 3rem;
     padding-right: 3rem;
-    background-color: aqua;
 }
 
 
 .header-left-image {
-    height: 70vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .left-image {
-    width: 650px;
-    height: 70vh;
+    width: 100%;
+    height: auto;
 }
 
 .header-right-text {
     width: 50rem;
     height: 70vh;
-    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: .5rem; */
 }
 
 .yellow {
@@ -54,6 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F08200;
 
 }
 
@@ -100,12 +105,6 @@
 }
 
 @media (max-width: 1070px) {
-    .left-image {
-        width: 470px;
-        height: 65vh;
-        transition: .5s;
-    }
-
     .sub-right-div {
         padding-top: 2.5rem;
         transition: .5s;
@@ -136,6 +135,10 @@
     .div2 {
         margin-left: 4rem;
     }
+
+    .header-right-text {
+        margin-left: 1rem;
+    }
 }
 
 @media (max-width: 952px) {
@@ -158,15 +161,11 @@
     .div2 {
         margin-left: 3rem;
     }
-
-    .left-image {
-        height: 60vh;
-    }
 }
 
 @media (max-width: 905px) {
     .heading {
-        font-size: 22px;
+        font-size: 23px;
     }
 
     .subtitle {
@@ -184,74 +183,118 @@
     }
 
     .div2 {
-        margin-left: 2rem;
+        margin-left: 3rem;
     }
 
-    .left-image {
-        height: 50vh;
-    }
-
-    .herodiv {
-        height: 90vh;
-    }
 }
 
 
 @media (max-width: 856px) {
     .herodiv {
         flex-direction: column-reverse;
-        height: 135vh;
-
-    }
-
-    .left-image {
-        width: 100%;
-        height: 60vh;
     }
 
     .header-left-image {
         width: 100%;
     }
 
-    .header-right-text {
-        width: 750px;
-        /* background-color: aqua; */
-    }
-
     .sub-right-div {
+
         padding-top: 1.5rem;
     }
 
     .heading {
-        font-size: 31px;
-        width: 100%;
+        font-size: 35px;
         text-align: center;
     }
 
     .subtitle {
-        font-size: 20px;
+        font-size: 23px;
         margin-top: 2%;
     }
-    .right-button-div{
+
+    .right-button-div {
         margin-top: 4%;
     }
-    .hero-button1{
-        width: 12rem;
+
+    .hero-button1 {
+        width: 13rem;
         height: 3rem;
     }
-    .hero-button2{
-        width: 12rem;
+
+    .hero-button2 {
+        width: 13rem;
         height: 3rem;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .heading {
+        font-size: 31px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .hero-button1 {
+        width: 10rem;
+    }
+
+    .hero-button2 {
+        width: 10rem;
     }
 }
 
-@media (max-width: 630px) {
-    .herodiv{
-        width: 100%;
+@media (max-width: 504px) {
+    .heading {
+        font-size: 25px;
     }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .hero-button1 {
+        width: 8rem;
+    }
+
+    .hero-button2 {
+        width: 8rem;
+    }
+
+    .herodiv {
+        padding-top: .5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .header-right-text {
+        height: 55vh;
+    }
+
 }
 
+/* iphone 12 pro */
+@media (max-width: 383px) {
+    .heading {
+        font-size: 20px;
+    }
 
-@media (max-width: 720px) {}
+    .subtitle {
+        font-size: 12px;
+    }
 
-@media (max-width: 540px) {}
+    .hero-button1 {
+        font-size: 12px;
+        width: 6rem;
+        height: 2.5rem;
+    }
+
+    .hero-button2 {
+        font-size: 12px;
+        width: 6rem;
+        height: 2.5rem;
+    }
+}

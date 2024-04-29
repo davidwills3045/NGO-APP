@@ -7,7 +7,7 @@ const Missionpage = () => {
     const sr =  ScrollReveal ({
       distance: '180px',
       duration: 2700,
-      reset: true
+      reset: false,
     })
     sr.reveal(".mission-div", { origin: "left", delay: 350 });
     sr.reveal(".mission-img-div", { origin: "right", delay: 350 });

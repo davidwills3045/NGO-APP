@@ -1,6 +1,10 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
+import DonateModal from "./Donatemodal";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => setIsOpen(true);
   // State to manage the visibility of the menu
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
@@ -50,14 +54,25 @@ const Navbar = () => {
           {/* <div className="foot-logo">
             <img src={logo} alt="logo-AHDC-African-Developement" className="log2" />
           </div> */}
-          <div className='logo-div'>
-            <img src="https://i.postimg.cc/SKZVPQNR/logo-AHDC-African-Developement.jpg" alt="logo-AHDC-African-Developement" className="nav__logo"/>
+          <div className="logo-div">
+            <img
+              src="https://i.postimg.cc/SKZVPQNR/logo-AHDC-African-Developement.jpg"
+              alt="logo-AHDC-African-Developement"
+              className="nav__logo"
+            />
           </div>
 
-          <div className={`nav__menu ${isMenuVisible ? 'show' : ''}`} id="nav-menu">
+          <div
+            className={`nav__menu ${isMenuVisible ? "show" : ""}`}
+            id="nav-menu"
+          >
             <ul className="nav__list">
               <li className="nav__item">
-                <a href="#home" className="nav__link active" onClick={linkAction}>
+                <a
+                  href="#home"
+                  className="nav__link active"
+                  onClick={linkAction}
+                >
                   HOME
                 </a>
               </li>
@@ -81,11 +96,18 @@ const Navbar = () => {
                   CONTACT US
                 </a>
               </li>
-              
+
               <div className="donate-btn">
-                <a href="#" className="top-btn" id="donate-menu">
+                <button
+                  onClick={handleOpenModal}
+                  className="top-btn"
+                  id="donate-menu"
+                >
                   Donate Now
-                </a>
+                </button>
+                {isOpen && (
+                  <DonateModal isOpen={isOpen} setIsOpen={setIsOpen} />
+                )}
               </div>
             </ul>
           </div>
@@ -99,9 +121,10 @@ const Navbar = () => {
           </div>
 
           <div className="donate-btn2">
-            <a href="#" className="top-btn">
+            <button onClick={handleOpenModal} className="top-btn">
               Donate Now
-            </a>
+            </button>
+            {isOpen && <DonateModal isOpen={isOpen} setIsOpen={setIsOpen} />}
           </div>
         </nav>
       </header>

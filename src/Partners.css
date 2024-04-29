@@ -1,36 +1,45 @@
-.partner{
+.partner {
+    min-height: 80vh;
     width: 100%;
-    height: 80vh;
+    height: 80%;
     overflow: hidden !important;
     background-image: url(../src/icon/back2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: contain;
-    padding-top: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
 }
 
-.partner-h1{
+.partner-h1 {
     text-align: center;
-    font-family: "Roboto";
+    font-family: "poppins";
     color: #EC8103;
     font-size: 23px;
 }
-.partner-icon{
+
+.partner-icon {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 3rem;
 }
-.action{
-    width: 10rem;
+
+.co {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.m1{
-    width: 7rem;
+
+.m1 {
+    width: 100%;
 }
-.part-text{
+
+.part-text {
+    width: 100%;
     text-align: center;
     font-family: "Roboto";
     font-size: 25px;
@@ -38,3 +47,23 @@
     margin-top: 3rem;
     line-height: 35px;
 }
+
+@media (max-width: 1070px) {
+    .m1{
+        width: 90%;
+    }
+    .part-text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .partner-h1{
+        font-size: 20px;
+    }
+}
+@media (max-width: 280px) {
+    .partner{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+

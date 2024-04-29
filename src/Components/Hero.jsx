@@ -1,14 +1,18 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import Navbar from "./Navbar";
+import DonateModal from "./Donatemodal";
 import heroimage from "../icon/image 3.png";
 import ScrollReveal from "scrollreveal";
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => setIsOpen(true);
   useEffect(() => {
     const sr =  ScrollReveal ({
       distance: '150px',
       duration: 2700,
-      reset: true
+      reset: false,
     })
     sr.reveal(".header-left-image", { origin: "left", delay: 350 });
     sr.reveal(".header-right-text", { origin: "right", delay: 350 });
@@ -22,7 +26,6 @@ const Hero = () => {
           <img className="left-image" src={heroimage} alt="loading..." />
         </div>
         <div className="header-right-text">
-          <div className="sub-right-div">
             <div className="heading">
               <h1>
                 African Human <br />
@@ -39,9 +42,7 @@ const Hero = () => {
             </div>
             <div className="right-button-div">
               <div className="div1">
-                <a href="#">
-                <button className="hero-button1">Donate Now</button>
-                </a>
+                <button onClick={handleOpenModal} className="hero-button1">Donate Now</button>
               </div>
               <div className="div2">
                 <a href="#">
@@ -49,8 +50,9 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-          </div>
         </div>
+        {isOpen && <DonateModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+
       </section>
     </>
   );

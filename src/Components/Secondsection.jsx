@@ -10,7 +10,7 @@ const Secondsection = () => {
     const sr =  ScrollReveal ({
       distance: '200px',
       duration: 2700,
-      reset: true
+      reset: false,
     })
     sr.reveal(".masterdiv1", { origin: "top", delay: 350 });
     sr.reveal(".grid-images", { origin: "bottom", delay: 350 });

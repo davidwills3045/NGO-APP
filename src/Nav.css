@@ -165,7 +165,7 @@
   font-weight: 500;
   transition: ease .50s;
   font-family: var(--body-font);
-
+  cursor: pointer;
 }
 
 #donate-menu {
@@ -246,3 +246,9 @@
   }
   
 }
+@media (max-width: 280px) {
+  .top-btn{
+    font-size: .7rem;
+    }
+}
+

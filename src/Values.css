@@ -1,6 +1,7 @@
 .values {
     overflow: hidden !important;
-    height: 90vh;
+    min-height: 100vh;
+    height: 90%;
     width: 100%;
     padding-top: 3rem;
     padding-left:5rem ;
@@ -24,8 +25,9 @@
 }
 
 .value-flex {
+    flex-wrap: wrap;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 5rem;
 }
@@ -42,6 +44,8 @@
     align-items: center;
     transition: ease .50s;
 	cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .value-flex1 h3 {
@@ -66,4 +70,58 @@
 
 .e {
     margin-top: -2.5rem;
+}
+
+@media (max-width: 1070px) {
+    .last-v{
+        margin-top: 1.5rem;
+    }
+    .values{
+        padding-bottom: 2.5rem;
+    }
+}
+@media (max-width: 1024px) {
+    #e{
+        margin-top: 1.5rem;
+    }
+    .value-flex1{
+        width: 18rem;
+        height: 19rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #second-v{
+        margin-top: 1.5rem;
+    }
+  
+}
+
+@media (max-width: 430px) {
+    .values{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+  
+}
+@media (max-width: 330px) {
+
+    .value-flex1 h3{
+        font-size: 18px;
+    }
+    .value-flex1 p{
+        font-size: 15px;
+    }
+    .value-text p{
+        font-size: 20px;
+    }
+    .value-text h1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 280px) {
+    .values{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }

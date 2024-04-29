@@ -1,6 +1,7 @@
-.secondsec-div{
+.secondsec-div {
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;  
+    height: 100%;
     padding-top: 3rem;
     overflow: hidden !important;
     display: flex;
@@ -8,24 +9,25 @@
     align-items: center;
 }
 
-.masterdiv1{
-    width: 500px;
+.masterdiv1 {
+    width: 31rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.subdiv1{
-    font-family:"inter";
-    height: 42vh;
-    border-bottom:1px solid #A1A1A1;
+.subdiv1 {
+    font-family: "inter";
+    height: auto;
+    border-bottom: 1px solid #A1A1A1;
     line-height: 36px;
     padding-top: .5rem;
+    padding-bottom: 2rem;
 }
 
 .subdiv1 h1 {
-    color:#EC8103;
+    color: #EC8103;
     font-size: 35px;
 }
 
@@ -35,17 +37,19 @@
     margin-top: 1rem;
 }
 
-.subdiv2{
-    font-family:"inter";
-    height: 43vh;
+.subdiv2 {
+    font-family: "inter";
+    height: auto;
     border-bottom: 1px solid #A1A1A1;
     padding-top: 1.5rem;
+    padding-bottom: 2rem;
 }
 
 .subdiv2 h1 {
     font-size: 35px;
-    color:#EC8103;
+    color: #EC8103;
 }
+
 .subdiv2 p {
     font-size: 17px;
     color: #283847;
@@ -53,19 +57,228 @@
     line-height: 29px;
 }
 
-.grid-images{
+.grid-images {
     display: flex;
-    width: 50%;
-}
-.main-image1{
-    width: 400px;
-    height: 47vh;
-}
-.main-image{
-    width: 280px;
-    height: 57vh;
+    justify-content: center;
+    align-items: center;
+    width: 42rem;
 }
 
-.image3{
-    margin-top: 5rem;
+.main-image1 {
+    width: 100%;
+    height: auto;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1070px) {
+    .subdiv1 {
+        transition: .5s;
+    }
+
+    .subdiv2 {
+        transition: .5s;
+    }
+
+    .subdiv1 h1 {
+        font-size: 30px;
+        transition: .5s;
+
+    }
+
+    .subdiv1 p {
+        font-size: 18px;
+        transition: .5s;
+
+    }
+
+    .subdiv2 h1 {
+        font-size: 29px;
+        transition: .5s;
+    }
+
+    .subdiv2 p {
+        font-size: 15px;
+        transition: .5s;
+    }
+
+    .secondsec-div {
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 947px) {
+    .subdiv1 h1 {
+        font-size: 27px;
+    }
+
+    .subdiv1 p {
+        font-size: 15px;
+
+    }
+
+    .subdiv2 h1 {
+        font-size: 25px;
+    }
+
+    .subdiv2 p {
+        font-size: 13px;
+        transition: .5s;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .secondsec-div {
+        flex-direction: column;
+    }
+
+    .masterdiv1 {
+        width: 49rem;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .secondsec-div {
+        padding-left: 0;
+    }
+
+    .subdiv2 {
+        padding-top: 1rem;
+        line-height: 20px;
+    }
+
+    .subdiv1 {
+        line-height: 30px;
+    }
+
+    .grid-images {
+        padding-top: 2rem;
+        width: 100%;
+    } 
+}
+
+@media (max-width: 670px) {
+    .subdiv1 h1 {
+        font-size: 25px;
+    }
+
+    .subdiv1 p {
+        font-size: 12px;
+
+    }
+
+    .subdiv2 h1 {
+        font-size: 25px;
+    }
+
+    .subdiv2 p {
+        font-size: 11px;
+    }
+
+    .subdiv2 {
+        line-height: 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .subdiv2 {
+        margin-left: -5rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .masterdiv1 {
+        flex-direction: column;
+    }
+
+    .subdiv2 {
+        margin-left: .1rem;
+    }
+
+    .subdiv1 {
+        line-height: 36px;
+    }
+
+    .subdiv1 h1 {
+        font-size: 35px;
+    }
+
+    .subdiv1 p {
+        font-size: 21px;
+    }
+
+    .subdiv2 {
+        border-bottom: 1px solid #A1A1A1;
+        padding-top: 2rem;
+    }
+
+    .subdiv2 h1 {
+        font-size: 35px;
+    }
+
+    .subdiv2 p {
+        font-size: 17px;
+        line-height: 31px;
+        margin-top: 1.5rem;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .subdiv1 {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .subdiv2 {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 415px) {
+
+    .subdiv1 h1 {
+        font-size: 31px;
+    }
+
+    .subdiv1 p {
+        font-size: 17px;
+    }
+
+    .subdiv2 h1 {
+        font-size: 31px;
+    }
+
+    .subdiv2 p {
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 360px) {
+    .subdiv1 h1 {
+        font-size: 25px;
+    }
+
+    .subdiv1 p {
+        font-size: 14px;
+    }
+
+    .subdiv2 h1 {
+        font-size: 25px;
+    }
+
+    .subdiv2 p {
+        font-size: 12px;
+
+    }
 }

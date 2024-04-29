@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import part1 from "../icon/Frame 83.png";
-import part2 from "../icon/action-aid.png";
+import part2 from "../icon/action-aid2.png";
 import part3 from "../icon/Frame 76.png";
 import part4 from "../icon/Frame 75.png";
 import part5 from "../icon/Frame 82.png";
@@ -13,7 +13,7 @@ const Partners = () => {
     const sr =  ScrollReveal ({
       distance: '200px',
       duration: 2700,
-      reset: true
+      reset: false,
     })
     sr.reveal(".partner-h1", { origin: "left", delay: 350 });
     sr.reveal(".partner-icon", { origin: "right", delay: 350 });
@@ -22,7 +22,7 @@ const Partners = () => {
   }, []);
   return (
     <>
-      <section className="partner" id="contact">
+      <section className="partner" >
         <div className="partner-h1">
           <h1>Partners</h1>
         </div>
@@ -30,8 +30,8 @@ const Partners = () => {
           <div>
             <img src={part1} alt="loading..." className="m1" />
           </div>
-          <div>
-            <img src={part2} alt="loading..." className="action m1" />
+          <div className='co'>
+            <img src={part2} alt="loading..." className="m1" id='action' />
           </div>
           <div>
             <img src={part3} alt="loading..." className="m1" />
